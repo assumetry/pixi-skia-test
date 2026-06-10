@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pixi-skia-pdf</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>Pixi.js + Skia (CanvasKit) + PDF</h1>
+        <p class="app-subtitle">
+          Слева — Pixi (forceCanvas), справа — Skia-рендер.
+          Кликайте по фигурам на обоих канвасах.
+        </p>
+      </header>
+      <div class="toolbar">
+        <button type="button" id="btn-random-shape">Сгенерировать случайную фигуру</button>
+        <button type="button" id="btn-export-pdf">Экспорт в PDF (вектор)</button>
+      </div>
+      <p class="status" id="status-label">Загрузка CanvasKit…</p>
+      <div class="canvas-row">
+        <div class="canvas-panel">
+          <h2>Pixi canvas</h2>
+          <div id="pixi-host"></div>
+        </div>
+        <div class="canvas-panel">
+          <h2>Skia canvas</h2>
+          <div id="skia-host"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/canvaskit/canvaskit-pdf.js" defer></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+export const MIN_POLYLINE_POINT_COUNT = 4;
