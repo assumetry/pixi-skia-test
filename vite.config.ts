@@ -7,6 +7,7 @@ const pixiLegacyBundle = resolve(
 );
 
 export default defineConfig({
+  base: '/pixi-skia-test/',
   resolve: {
     alias: {
       'pixi.js': pixiLegacyBundle,
