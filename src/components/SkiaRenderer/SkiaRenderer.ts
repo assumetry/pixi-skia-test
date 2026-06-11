@@ -1,6 +1,6 @@
 import type { Container } from 'pixi.js-legacy';
-import type { Surface } from '@rollerbird/canvaskit-wasm-pdf';
 import { convertPixiContainerToSkia } from '../PixiToSkiaConverter';
+import type { Surface } from '@/shared/types';
 import { SKIA_CANVAS_ID } from './constants';
 import type { SkiaRendererHandle, SkiaRendererOptions } from './types';
 

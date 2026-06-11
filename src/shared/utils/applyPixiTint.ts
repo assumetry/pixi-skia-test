@@ -1,4 +1,4 @@
-import { COLOR_CHANNEL_MASK, COLOR_CHANNEL_MAX } from '../constants';
+import { COLOR_CHANNEL_MASK, COLOR_CHANNEL_MAX } from '@/shared/constants';
 
 /** Multiplies Pixi fill color by a Graphics/Sprite tint (0xRRGGBB). */
 export const applyPixiTint = (color: number, tint: number): number => {

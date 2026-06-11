@@ -1,5 +1,5 @@
 import type { Container } from 'pixi.js-legacy';
-import type { CanvasKit } from '@rollerbird/canvaskit-wasm-pdf';
+import type { CanvasKit } from '@/shared/types';
 
 export interface SkiaRendererOptions {
   canvasKit: CanvasKit;

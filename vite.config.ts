@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const rootDir = dirname(fileURLToPath(import.meta.url));
 
 const pixiLegacyBundle = resolve(
-  __dirname,
+  rootDir,
   'node_modules/pixi.js-legacy/dist/pixi-legacy.mjs',
 );
 
@@ -10,13 +13,12 @@ export default defineConfig({
   base: '/pixi-skia-test/',
   resolve: {
     alias: {
+      '@': resolve(rootDir, 'src'),
       'pixi.js': pixiLegacyBundle,
       'pixi.js-legacy': pixiLegacyBundle,
     },
   },
   optimizeDeps: {
-    // Absolute path — alias + 'pixi.js-legacy/dist/...' would duplicate the path segment.
     include: [pixiLegacyBundle],
-    exclude: ['@rollerbird/canvaskit-wasm-pdf'],
   },
 });

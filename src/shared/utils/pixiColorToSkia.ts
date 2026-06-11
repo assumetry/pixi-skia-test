@@ -1,5 +1,5 @@
-import type { CanvasKit, Color } from '@rollerbird/canvaskit-wasm-pdf';
-import { COLOR_CHANNEL_MASK, COLOR_CHANNEL_MAX } from '../constants';
+import type { CanvasKit, Color } from '@/shared/types';
+import { COLOR_CHANNEL_MASK, COLOR_CHANNEL_MAX } from '@/shared/constants';
 
 /** Converts Pixi 0xRRGGBB color and alpha to CanvasKit Color4f. */
 export const pixiColorToSkia = (

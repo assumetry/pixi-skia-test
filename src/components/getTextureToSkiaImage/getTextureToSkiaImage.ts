@@ -1,5 +1,5 @@
 import type { Texture } from 'pixi.js-legacy';
-import type { CanvasKit, Image } from '@rollerbird/canvaskit-wasm-pdf';
+import type { CanvasKit, Image } from '@/shared/types';
 
 export const getTextureToSkiaImage = (
   canvasKit: CanvasKit,

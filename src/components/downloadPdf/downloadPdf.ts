@@ -1,4 +1,4 @@
-import { DEMO_PDF_FILENAME } from '../../shared/constants';
+import { DEMO_PDF_FILENAME } from '@/shared/constants';
 import { PDF_MIME_TYPE } from './constants';
 
 export const downloadPdf = (

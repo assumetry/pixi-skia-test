@@ -1,6 +1,6 @@
 import './style.css';
 import { Application } from 'pixi.js-legacy';
-import { connectDualCanvasPointers } from './components/connectDualCanvasPointers';
+import { connectDualCanvasPointers } from '@/components/connectDualCanvasPointers';
 import {
   APP_ROOT_ID,
   DEMO_PDF_FILENAME,
@@ -9,17 +9,13 @@ import {
   PIXI_HOST_ID,
   SKIA_HOST_ID,
   DEFAULT_SCENE_BACKGROUND_COLOR,
-} from './shared/constants';
-import { getExportPdfButton } from './shared/ui/getExportPdfButton';
-import { getShapeButton } from './shared/ui/getShapeButton';
-import { getStatusLabel } from './shared/ui/getStatusLabel';
-import { createDemoScene } from './shared/utils/sceneFactory';
-import { loadCanvasKit } from './components/loadCanvasKit';
-import { downloadPdf } from './components/downloadPdf';
-import { exportPixiContainerToPdf } from './components/exportPixiContainerToPdf';
-import { createSkiaRenderer } from './components/SkiaRenderer';
-import { addRandomShape } from './shared/utils/addRandomShape';
-
+} from '@/shared/constants';
+import { getExportPdfButton, getShapeButton, getStatusLabel } from '@/shared/ui';
+import { addRandomShape, createDemoScene } from '@/shared/utils';
+import { loadCanvasKit } from '@/components/loadCanvasKit';
+import { downloadPdf } from '@/components/downloadPdf';
+import { exportPixiContainerToPdf } from '@/components/exportPixiContainerToPdf';
+import { createSkiaRenderer } from '@/components/SkiaRenderer';
 const run = async (): Promise<void> => {
   // Getting ui elements
   const randomShapeButton = getShapeButton();

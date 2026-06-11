@@ -1,6 +1,6 @@
 import { Container, Graphics } from 'pixi.js-legacy';
+import { PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '@/shared/constants';
 import { attachShapeInteractivity } from './attachShapeInteractivity';
-import { PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '../constants';
 import { randomColor } from './randomColor';
 
 /** Adds a random PIXI.Graphics shape (rectangle, circle, ellipse, or polyline) to the container. */

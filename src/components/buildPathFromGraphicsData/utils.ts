@@ -1,7 +1,7 @@
-import type { CanvasKit, Path } from '@rollerbird/canvaskit-wasm-pdf';
 import { SHAPES } from '@pixi/math';
 import type { Circle, Ellipse, Polygon, Rectangle, RoundedRectangle } from '@pixi/math';
 import type { GraphicsData } from '@pixi/graphics';
+import type { CanvasKit, PathBuilder } from '@/shared/types';
 import { MIN_POLYLINE_POINT_COUNT } from './constants';
 import type { BuildPathOptions } from './types';
 
@@ -11,7 +11,7 @@ export const shouldCloseLinePath = (data: GraphicsData): boolean => {
 
 export const addShapeToPath = (
   canvasKit: CanvasKit,
-  path: Path,
+  path: PathBuilder,
   data: GraphicsData,
   options: BuildPathOptions,
 ) => {
@@ -55,16 +55,7 @@ export const addShapeToPath = (
         return;
       }
 
-      path.moveTo(polylinePoints[0], polylinePoints[1]);
-
-      for (let index = 2; index < polylinePoints.length; index += 2) {
-        path.lineTo(polylinePoints[index], polylinePoints[index + 1]);
-      }
-
-      if (options.closePath) {
-        path.close();
-      }
-
+      path.addPolygon(polylinePoints, options.closePath);
       break;
     }
   }

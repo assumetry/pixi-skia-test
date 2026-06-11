@@ -4,19 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup:canvaskit": "node scripts/setup-canvaskit.mjs",
-    "postinstall": "node scripts/setup-canvaskit.mjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "build:canvaskit": "bash scripts/build-canvaskit.sh"
   },
   "devDependencies": {
+    "@types/node": "^25.9.3",
     "typescript": "~6.0.2",
     "vite": "^8.0.12"
   },
   "dependencies": {
-    "@rollerbird/canvaskit-wasm-pdf": "file:deps/rollerbird-canvaskit-wasm-pdf-0.1.3.tgz",
     "pixi.js-legacy": "7.2.4"
   }
 }

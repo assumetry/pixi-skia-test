@@ -1,5 +1,5 @@
 import { Container } from 'pixi.js-legacy';
-import type { Canvas, CanvasKit } from '@rollerbird/canvaskit-wasm-pdf';
+import type { Canvas, CanvasKit } from '@/shared/types';
 import { renderDisplayObject } from './utils';
 
 /**

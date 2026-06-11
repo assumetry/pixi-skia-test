@@ -1,12 +1,12 @@
-import type { CanvasKit } from '@rollerbird/canvaskit-wasm-pdf';
-import { CANVASKIT_JS_URL, CANVASKIT_WASM_URL } from './constants';
+import type { CanvasKit } from '@/shared/types';
+import { CANVASKIT_WASM_URL } from './constants';
 import './types';
 
 export const loadCanvasKit = async (): Promise<CanvasKit> => {
   const CanvasKitInit = window.CanvasKitInit;
 
   if (!CanvasKitInit) {
-    throw new Error(`CanvasKitInit is not available. Check script tag in index.html: ${CANVASKIT_JS_URL}`);
+    throw new Error('CanvasKitInit is not available');
   }
 
   const wasmResponse = await fetch(CANVASKIT_WASM_URL);

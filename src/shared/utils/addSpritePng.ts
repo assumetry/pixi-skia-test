@@ -1,6 +1,6 @@
 import { Container, Sprite, Texture } from 'pixi.js-legacy';
-import { PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '../constants';
-import bunny from '../assets/bunny.png';
+import { PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '@/shared/constants';
+import bunny from '@/shared/assets/bunny.png';
 
 export const addSpritePng = (container: Container): Sprite => {
   const texture = Texture.from(bunny);

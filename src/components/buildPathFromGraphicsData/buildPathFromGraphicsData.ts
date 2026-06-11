@@ -1,5 +1,5 @@
-import type { CanvasKit, Path } from '@rollerbird/canvaskit-wasm-pdf';
 import type { GraphicsData } from '@pixi/graphics';
+import type { CanvasKit, Path } from '@/shared/types';
 import { addShapeToPath } from './utils';
 import type { BuildPathOptions } from './types';
 
@@ -8,9 +8,7 @@ export const buildPathFromGraphicsData = (
   data: GraphicsData,
   options: BuildPathOptions,
 ): Path => {
-  const path = new canvasKit.Path();
-
-  addShapeToPath(canvasKit, path, data, options);
-
-  return path;
+  const builder = new canvasKit.PathBuilder();
+  addShapeToPath(canvasKit, builder, data, options);
+  return builder.snapshot();
 };

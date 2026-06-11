@@ -1,4 +1,4 @@
-import type { CanvasKit } from '@rollerbird/canvaskit-wasm-pdf';
+import type { CanvasKit } from '@/shared/types';
 
 declare global {
   interface Window {

@@ -1,8 +1,8 @@
 import { Container, Graphics } from 'pixi.js-legacy';
+import { DEFAULT_DEMO_MARGIN, DEFAULT_DEMO_ROUND_RECT_RADIUS, DEFAULT_DEMO_SHAPE_FILL_COLOR, DEFAULT_DEMO_SHAPE_HEIGHT, DEFAULT_DEMO_SHAPE_WIDTH, PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '@/shared/constants';
 import { attachShapeInteractivity } from './attachShapeInteractivity';
 import { addSpritePng } from './addSpritePng';
 import { randomInRange } from './randomInRange';
-import { DEFAULT_DEMO_MARGIN, DEFAULT_DEMO_ROUND_RECT_RADIUS, DEFAULT_DEMO_SHAPE_FILL_COLOR, DEFAULT_DEMO_SHAPE_HEIGHT, DEFAULT_DEMO_SHAPE_WIDTH, PIXI_CONTAINER_HEIGHT, PIXI_CONTAINER_WIDTH } from '../constants';
 
 /** Builds the initial Pixi scene with interactive graphics and a sprite. */
 export const createDemoScene = (

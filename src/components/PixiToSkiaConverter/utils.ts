@@ -4,9 +4,8 @@ import {
   Sprite,
 } from 'pixi.js-legacy';
 import type { GraphicsData } from '@pixi/graphics';
-import type { Canvas, CanvasKit, Paint, Path } from '@rollerbird/canvaskit-wasm-pdf';
-import { applyPixiTint } from '../../shared/utils/applyPixiTint';
-import { pixiColorToSkia } from '../../shared/utils/pixiColorToSkia';
+import type { Canvas, CanvasKit, Paint, Path } from '@/shared/types';
+import { applyPixiTint, pixiColorToSkia } from '@/shared/utils';
 import { buildPathFromGraphicsData, shouldCloseLinePath } from '../buildPathFromGraphicsData';
 import { getTextureToSkiaImage } from '../getTextureToSkiaImage';
 

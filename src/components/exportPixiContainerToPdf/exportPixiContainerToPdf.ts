@@ -1,7 +1,7 @@
 import type { Container } from 'pixi.js-legacy';
-import type { CanvasKit } from '@rollerbird/canvaskit-wasm-pdf';
 import { convertPixiContainerToSkia } from '../PixiToSkiaConverter';
-import { DEMO_PDF_AUTHOR, DEMO_PDF_TITLE } from '../../shared/constants';
+import { DEMO_PDF_AUTHOR, DEMO_PDF_TITLE } from '@/shared/constants';
+import type { CanvasKit } from '@/shared/types';
 import { PDF_CREATOR, PDF_PRODUCER } from './constants';
 import type { PdfExportOptions } from './types';
 
